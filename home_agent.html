@@ -1,0 +1,27 @@
+<html>
+<head>
+</head>
+<body>
+
+<h1><i>Welcome Booking Agent {{username}}!</i></h1>
+<hr/>
+{% if error %}
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+{% endif %}
+<a href="/agent_view_flights"><h3>View my flights</h3></a>
+
+<a href="/agent_search_purchase"><h3>Search and purchase</h3></a>
+
+<a href="/commission"><h3>View my commissions</h3></a>
+
+<a href="/top_cus"><h3>View top customers</h3></a>
+<br/>
+
+
+<a href="/logout_agent">Logout</a>
+
+</body>
+
+
+</html>
+

@@ -1,0 +1,19 @@
+
+
+<!--agent reg-->
+<html>
+<head>
+</head>
+<body>
+<form action="/registerAuth_agent" method="POST">
+	<input type="email" name = "email" placeholder="Agent Email" required/> </br>
+	<input type="password" name = "password" placeholder="Agent Password" required/></br>
+	<input type="text" name = "id" placeholder="Agent ID" required/> </br>
+	<input type="submit" value = Register />
+	{% if error %}
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+	{% endif %}
+</form>
+<a href="/">Go back</a>
+</body>
+</html>

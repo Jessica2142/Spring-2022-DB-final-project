@@ -1,0 +1,42 @@
+<html>
+<head>
+</head>
+<body>
+
+<h1><i>Welcome Airline Staff {{username}}!</i></h1>
+<hr/>
+{% if error %}
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+{% endif %}
+<a href="/staff_view_flights"><h3>View my flights</h3></a>
+
+<a href="/create_flight"><h3>Create flights</h3></a>
+
+<a href="/change_status"><h3>Change flight status</h3></a>
+
+<a href="/add_airplane"><h3>Add airplanes</h3></a>
+
+<a href="/view_agent"><h3>View all booking agents</h3></a>
+
+<a href="/view_cus"><h3>View frequent customers</h3></a>
+
+<a href="/report"><h3>View reports</h3></a>
+
+<a href="/revenue"><h3>Compare revenues</h3></a>
+
+<a href="/destination"><h3>View top destinations</h3></a>
+
+<a href="/permission"><h3>Grant new permissions</h3></a>
+
+<a href="/add_agent"><h3>Add booking agents</h3></a>
+
+<br/>
+
+
+<a href="/logout_staff">Logout</a>
+
+</body>
+
+
+</html>
+

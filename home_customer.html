@@ -1,0 +1,27 @@
+
+
+<html>
+<head>
+</head>
+<body>
+
+<h1><i>Welcome User {{username}}!</i></h1>
+<hr/>
+{% if error %}
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+{% endif %}
+<a href="/cus_view_flights"><h3>View my flights</h3></a>
+
+<a href="/cus_search_purchase"><h3>Search and purchase</h3></a>
+
+<a href="/spending"><h3>Track my spendings</h3></a>
+
+<br/>
+
+
+<a href="/logout_customer">Logout</a>
+
+</body>
+
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>OARS</title>
+</head>
+
+<body>
+<h1><b><i>Welcome to Our Online Airline Reservation System!</i></b></h1>
+<hr/>
+<!--{% if not message %}
+-->
+    {% if error %}
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+	{% endif %}
+	<a href="/login"><h3>Login</h3></a>
+	<br/>
+	<a href="/register"><h3>Register</h3></a>
+	<br/>
+	<h3><b>Search for Flights</b></h3>
+	<form action="/public_search" method="POST">
+    	<input type="text" name = "source_city/airport" placeholder="source city/airport" required/> 
+    	<br/>
+    	<input type="text" name = "destination_city/airport" placeholder="destination city/airport" required/> 
+    	<br/>
+    	<input type="submit" value = Search />
+    	<br/>
+	</form>
+	<br/>
+	<style type="text/css">
+	table, th, td{
+		border: 1px solid black;
+	}
+    </style>
+    
+    <table>
+    	<th>airline_name</th>
+    	<th>flight_num</th>
+    	<th>departure_airport</th>
+    	<th>departure_time</th>
+    	<th>arrival_airport</th>
+    	<th>arrival_time</th>
+    	<th>price</th>
+    	<th>status</th>
+    	<th>airplane_id</th>
+    <!--
+    {% if not posts %}
+        <tr>
+        <td colspan = "9">Flight doesn't exist</td>
+        </tr>
+    {% endif %}
+    -->
+    {% for line in posts %}
+    	<tr>
+    		<td>{{line['airline_name']}}</td>
+    		<td>{{line['flight_num']}}</td>
+    		<td>{{line['departure_airport']}}</td>
+    		<td>{{line['departure_time']}}</td>
+    		<td>{{line['arrival_airport']}}</td>
+    		<td>{{line['arrival_time']}}</td>
+    		<td>{{line['price']}}</td>
+    		<td>{{line['status']}}</td>
+    		<td>{{line['airplane_id']}}</td>	
+    	</tr>
+    {% endfor %}
+    </table>
+	
+	<h3><b>View Flight Status</b></h3>
+	
+	<form action="/public_status" method="POST">
+    	<input type="text" name = "flight_num" placeholder="flight number" required/> 
+    	<br/>
+    	<input type="submit" value = Search />
+    	<br/>
+	</form>
+	<br/>
+	
+	<style type="text/css">
+	table, th, td{
+		border: 1px solid black;
+	}
+    </style>
+
+    <table>
+    	<th>flight_num</th>
+        <th>status</th>
+    
+       
+    <!--
+        <tr>
+        <td colspan = "2">Flight DNE</td>
+        </tr>
+    -->
+    
+    
+    {% for line in posts2 %}
+    	<tr>
+    		<td>{{line['flight_num']}}</td>
+    		<td>{{line['status']}}</td>
+    	</tr>
+    {% endfor %}
+    </table>
+<!--{% endif %}
+
+
+{% if message %}
+	<a href="/logout">Logout</a>
+	<a href="/remove_account">Remove Account</a>
+	<p class="message">You are logged in {{message}}. You have {{num}} follower(s)</p> </br>
+	<a href="/tweets">View your tweets</a> </br>
+	<a href="/find_people">Find people to follow</a> </br>
+	<a href="/unfollow">Unfollow someone</a> </br>
+	<a href="/view_followed">View people you have followed</a> </br>
+	</br>
+
+        <h4>15 most recent tweets from you and your followers </h4> </br>
+
+	{% for line in tweets%}
+	        <p>{{line}}</p>
+	        <hr>
+	{% endfor %}
+	{% endif %}
+-->
+</body>
+
+</html>
